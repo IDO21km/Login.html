@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Rent Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">🚗 CAR RENT</div>
+      <nav>
+        <a class="active">Dashboard</a>
+        <a>Drivers</a>
+        <a>Bookings</a>
+        <a>Notifications</a> 
+        <a>Settings</a>
+        <hr />
+        <a>Payment Details</a>
+        <a>Transactions</a>
+        <a>Car Report</a>
+      </nav>
+      <button class="logout">Logout</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <header class="top-bar">
+        <div>
+          <h2>Today's Statistics</h2>
+          <p>Tue, 14 Nov, 2022, 11:30 AM</p>
+        </div>
+        <div class="search-bar">
+          <span class="bell">🔔</span>
+          <input type="text" placeholder="Search here" />
+        </div>
+      </header>
+
+      <section class="cards">
+        <div class="card">
+          <h3>Income</h3>
+          <p class="amount">$9460.00 <span class="down">▼ 1.5%</span></p>
+          <p>Last week income: $25658.00</p>
+        </div>
+        <div class="card">
+          <h3>Expenses</h3>
+          <p class="amount">$5660.00 <span class="up">▲ 2.5%</span></p>
+          <p>Last week expenses: $22658.00</p>
+        </div>
+        <div class="card pie-card">
+          <h3>Hire vs Cancel</h3>
+          <div class="pie-placeholder">[Pie Chart]</div>
+          <ul>
+            <li><span class="blue-dot"></span> Total Hired: 54%</li>
+            <li><span class="green-dot"></span> Total Canceled: 20%</li>
+            <li><span class="red-dot"></span> Total Pending: 26%</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="status">
+        <h3>Live Car Status</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Car no.</th>
+              <th>Driver</th>
+              <th>Status</th>
+              <th>Earning</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="car-status-body">
+            <!-- Data injected by JS -->
+          </tbody>
+        </table>
+      </section>
+
+      <section class="chart-section">
+        <h3>Earning Summary</h3>
+        <div class="chart-placeholder">[Chart Placeholder]</div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
